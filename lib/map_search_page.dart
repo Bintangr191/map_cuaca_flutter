@@ -27,7 +27,7 @@ class _MapSearchPageState extends State<MapSearchPage> {
   Future<Map<String, dynamic>?> searchLocation(String query) async {
     try {
       final url = Uri.parse(
-          "https://nominatim.openstreetmap.org/search?q=$query&format=json&limit=1");
+          "");
 
       final response = await http.get(url, headers: {
         "User-Agent": "flutter-map-example"
@@ -56,7 +56,7 @@ class _MapSearchPageState extends State<MapSearchPage> {
       if (key == null || key.isEmpty) return null;
 
       final url = Uri.parse(
-          "https://api.openweathermap.org/data/2.5/weather?lat=$lat&lon=$lon&appid=$key&units=metric");
+          "");
 
       final response = await http.get(url);
 
